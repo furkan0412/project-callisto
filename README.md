@@ -1,74 +1,117 @@
 # Project Callisto: Stargate Universe Archive
 
-Welcome to **Project Callisto**, a personal web project dedicated to exploring the rich *Stargate* universe through handcrafted HTML, CSS, and JavaScript. This static site serves as a learning platform and creative archive—designed solely for educational use and local development.
+# Project Callisto: Stargate Universe Archive
+
+[![GPLv3 License](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
+[![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-brightgreen)](https://furkan0412.github.io/project-callisto/)
+[![HTML Valid](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Ffurkan0412.github.io%2Fproject-callisto%2F)](https://validator.w3.org/)
+[![Status](https://img.shields.io/badge/Project%20Status-In%20Progress-orange)](#-current-status)
+
+> *"Symbols engraved into the ring, seven chevrons engaged… coordinates locked."*
+
+
+> *“Seven chevrons engaged. Wormhole established.”*
+
+Welcome to **Project Callisto**, a handcrafted digital archive of the *Stargate* universe — designed and coded from the ground up by **Halil Furkan Türkmen**. This project is a fusion of science fiction fandom and self-taught web development, deployed on **GitHub Pages** for educational purposes.
+
+> Built for learning. Powered by passion. Licensed for freedom.
 
 ---
 
-## 🚀 Project Overview
+## 🌌 Mission Parameters
 
-Project Callisto showcases key moments, characters, and lore from the Stargate multiverse in a clean, semantic, and maintainable codebase. All visuals and content are crafted or curated to support learning front-end development with vanilla technologies.
+Project Callisto is a static front-end site and a personal tribute to the rich mythology of *Stargate SG-1*, *Atlantis*, and *Universe*. Every file is created manually to practice clean, scalable, and semantic web development — no frameworks, no shortcuts, just HTML, CSS, and JavaScript.
 
----
+✧ Fan-made archive of Stargate lore and characters  
+✧ Modular, semantic, and accessible front-end structure  
+✧ AI-generated visuals (no copyrighted materials)  
+✧ Educational, non-commercial, open source under GPLv3  
 
-## 🧰 Tech Stack
-
-- **HTML5** — semantic markup  
-- **CSS3** — styling and layout  
-- **Vanilla JavaScript** — planned interactivity  
-- **Git** — version control  
-- **VS Code** — development environment  
-- **Windows 10** — local platform
+> This is a training ground — not a product.
 
 ---
 
-## 🎨 Fonts
+## 🛠️ Tech Stack
 
-Typography is powered by [Google Fonts](https://fonts.google.com) with:
-
-- **Inter** — modern, readable body text  
-- **JetBrains Mono** — sleek monospace for code and accents  
-
-These fonts create a futuristic, clean sci-fi aesthetic.
-
----
-
-## 🖼️ Images and Visuals
-
-All images and visual assets in this project are **AI-generated conceptual illustrations inspired by the Stargate universe**. No copyrighted images or media owned by MGM, Amazon, or other rights holders are used.
-
-These AI creations serve as artistic interpretations and are **not official representations** of any Stargate content.
+| Tool / Tech         | Description                             |
+|---------------------|-----------------------------------------|
+| **HTML5**           | Semantic structure                      |
+| **CSS3**            | Modular styles and responsive layout    |
+| **JavaScript (vanilla)** | Planned UI enhancements            |
+| **Visual Studio Code** | Development environment              |
+| **Git + GitHub**    | Version control and publishing          |
+| **GitHub Pages**    | Static deployment platform              |
 
 ---
 
-## 🧠 Purpose and Scope
+## 🎨 Design Language
 
-This project is a personal sandbox for web development learning — every line of code is hand-crafted without templates or frameworks. The Stargate universe acts as inspiration and content focus to combine passion with practical skills.
+Typography and visuals aim to reflect a clean, sci-fi-inspired user interface:
 
----
+- **[Inter](https://fonts.google.com/specimen/Inter)** — smooth, modern text  
+- **[JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono)** — futuristic monospace for accents  
+- Custom colors, glows, and grid layout patterns for Stargate-style UI themes
 
-## 📂 Project Status
-
-- ✅ HTML foundation complete  
-- ✅ Git version control initialized  
-- ⏳ CSS styling and layout in progress  
-- ⏳ JavaScript interactivity upcoming
+All visuals are **AI-generated** and used as **original, non-commercial interpretations** of Stargate aesthetics. No official imagery is used.
 
 ---
 
-## ⚖️ Legal Disclaimer
+## 🧠 Objectives
 
-Project Callisto is a non-commercial educational project. It is **not affiliated with or endorsed by MGM, Amazon, or any Stargate rights holders**.
+Project Callisto is built to explore:
 
-All intellectual property (IP) related to Stargate — including names, concepts, and lore — belongs solely to their respective owners.
-
-AI-generated images included here are original artistic works created for this project and do not infringe on copyrights or trademarks.
-
-This repository respects all applicable laws and does not claim ownership over Stargate intellectual property.
+- Semantic web development with HTML and CSS  
+- Sci-fi inspired UI/UX patterns  
+- Git-based project versioning and publishing  
+- Open-source contribution and licensing  
+- Building in the open, for learning and sharing
 
 ---
 
-## 📡 Transmission End
+## 📡 Current Status
 
-Thank you for exploring Project Callisto. This is a personal command post, dialed in for learning and discovery.
+| Feature         | Status       |
+|-----------------|--------------|
+| HTML Structure  | ✅ Complete  |
+| CSS Layout/Theming | 🛠️ In progress |
+| JavaScript Logic | 🛠️ Coming soon |
+| GitHub Hosting  | ✅ Live via GitHub Pages |
 
-Until next time — *Chevron Seven, locked.*
+---
+
+## ⚖️ Legal and IP Disclaimer
+
+Project Callisto is a **fan-made, non-commercial, educational project**. It is **not affiliated with or endorsed by MGM, Amazon, or any official owners of Stargate intellectual property**.
+
+- All Stargate-related names, characters, and lore are owned by their respective rights holders.  
+- All visual art assets are AI-generated and fall under fair use for non-commercial educational purposes.  
+- For detailed IP and usage terms, see [LEGAL.md](LEGAL.md).
+
+---
+
+## 📄 License
+
+All source code in this repository is licensed under the **GNU General Public License v3.0 (GPLv3)**.
+
+- You are free to use, modify, and distribute this code  
+- Any public modifications or distributions must remain under GPLv3  
+- See [LICENSE](LICENSE) for full license text
+
+> AI-generated images and non-code assets are licensed separately — see [LEGAL.md](LEGAL.md)
+
+---
+
+## 🌠 Credits & Acknowledgments
+
+Visit [CREDITS.md](CREDITS.md) for full acknowledgments, tool references, and inspiration sources.
+
+Special thanks to the Stargate community, sci-fi fandom, and the open-source world for lighting the way.
+
+---
+
+## 🌀 Final Transmission
+
+Project Callisto is an active wormhole between old-school sci-fi love and modern web creation.  
+If you're a developer learning to dial in your skills — welcome to the team.
+
+**Chevron Seven: Locked.**
