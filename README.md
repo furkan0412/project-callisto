@@ -1,7 +1,5 @@
 # Project Callisto: Stargate Universe Archive
 
-# Project Callisto: Stargate Universe Archive
-
 [![GPLv3 License](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 [![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-brightgreen)](https://furkan0412.github.io/project-callisto/)
 [![HTML Valid](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Ffurkan0412.github.io%2Fproject-callisto%2F)](https://validator.w3.org/)
@@ -10,11 +8,9 @@
 > *"Symbols engraved into the ring, seven chevrons engaged… coordinates locked."*
 
 
-> *“Seven chevrons engaged. Wormhole established.”*
-
 Welcome to **Project Callisto**, a handcrafted digital archive of the *Stargate* universe — designed and coded from the ground up by **Halil Furkan Türkmen**. This project is a fusion of science fiction fandom and self-taught web development, deployed on **GitHub Pages** for educational purposes.
 
-> Built for learning. Powered by passion. Licensed for freedom.
+> Built for learning. Powered by passion.
 
 ---
 
@@ -39,8 +35,6 @@ Project Callisto is a static front-end site and a personal tribute to the rich m
 | **CSS3**            | Modular styles and responsive layout    |
 | **JavaScript (vanilla)** | Planned UI enhancements            |
 | **Visual Studio Code** | Development environment              |
-| **Git + GitHub**    | Version control and publishing          |
-| **GitHub Pages**    | Static deployment platform              |
 
 ---
 

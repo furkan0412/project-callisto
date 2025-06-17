@@ -14,7 +14,8 @@ This project is an homage, created to support personal learning and share web de
 
 ## 🎨 Visual Asset Licensing
 
-All artwork and visuals in this project are **AI-generated conceptual illustrations**, created with tools like Leonardo AI and Firefly. These visuals are:
+All artwork and visuals in this project are **AI-generated conceptual illustrations**. 
+These visuals are:
 
 - **Original artworks**
 - **Non-commercial**
