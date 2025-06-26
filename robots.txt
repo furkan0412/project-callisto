@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://furkan0412.github.io/project-callisto/sitemap.xml
+Sitemap: https://project-callisto.vercel.app/sitemap.xml
