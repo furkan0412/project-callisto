@@ -1,23 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 
-// --- IMPORTANT: CONFIGURE THESE SETTINGS ---
-const baseUrl = 'https://project-callisto.vercel.app/'; // Your website's base URL
+// --- CONFIGURATION ---
+const baseUrl = 'https://project-callisto.vercel.app/';
 
-const pages = [
-  'index.html',
-  'about.html',
-  'character.html',
-  'concept.html',
-  'race.html',
-  'series.html',
-  'technology.html',
-  'timeline.html',
-  'credits.html',
-  'legal.html',
-  'contact.html',
-  'license.html'
-];
+// Folder paths
+const rootDir = __dirname;
+const pagesDir = path.join(__dirname, 'pages');
 
 const pageConfig = {
   'index.html': { priority: '1.0', changefreq: 'monthly' },
@@ -33,32 +22,41 @@ const pageConfig = {
   'contact.html': { priority: '0.4', changefreq: 'yearly' },
   'license.html': { priority: '0.4', changefreq: 'yearly' }
 };
-// --- END CONFIGURATION ---
+
+// Helper to scan .html files in a directory (non-recursive)
+function scanHtmlFiles(dir) {
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir).filter(f => f.endsWith('.html'));
+}
+
+// Get all pages (index.html in root + all .html in /pages)
+const rootPages = fs.existsSync(path.join(rootDir, 'index.html')) ? ['index.html'] : [];
+const pageFiles = rootPages.concat(scanHtmlFiles(pagesDir));
 
 let sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 
-pages.forEach(page => {
-  // Get the correct file path based on whether it's index.html or in /pages
+pageFiles.forEach(page => {
+  // Determine file full path
   const filePath = (page === 'index.html')
-    ? path.join(__dirname, page)
-    : path.join(__dirname, 'pages', page);
+    ? path.join(rootDir, page)
+    : path.join(pagesDir, page);
 
   let lastModDate;
-
   try {
     const stats = fs.statSync(filePath);
-    lastModDate = stats.mtime.toISOString(); // Now includes full ISO date and time
-  } catch (error) {
-    console.warn(`Could not get last modification date for ${page}. Using current date.`);
-    lastModDate = new Date().toISOString().split('T')[0];
+    lastModDate = stats.mtime.toISOString();
+  } catch {
+    lastModDate = new Date().toISOString();
   }
 
-  // Build the URL path
-  const loc = (page === 'index.html') ? baseUrl : baseUrl + page.replace('.html', '');
+  // Build loc URL
+  const loc = (page === 'index.html')
+    ? baseUrl
+    : baseUrl + page.replace('.html', '');
+
   const config = pageConfig[page] || { priority: '0.5', changefreq: 'weekly' };
 
-  // Add entry to sitemap
   sitemapContent += `
   <url>
     <loc>${loc}</loc>
@@ -71,6 +69,5 @@ pages.forEach(page => {
 sitemapContent += `
 </urlset>`;
 
-// Save sitemap.xml to the root of your project
-fs.writeFileSync('sitemap.xml', sitemapContent.trim());
+fs.writeFileSync(path.join(rootDir, 'sitemap.xml'), sitemapContent.trim());
 console.log('✅ sitemap.xml generated successfully!');
