@@ -9,5 +9,19 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/about", "destination": "/pages/about.html" },
+    { "source": "/character", "destination": "/pages/character.html" },
+    { "source": "/concept", "destination": "/pages/concept.html" },
+    { "source": "/race", "destination": "/pages/race.html" },
+    { "source": "/series", "destination": "/pages/series.html" },
+    { "source": "/technology", "destination": "/pages/technology.html" },
+    { "source": "/timeline", "destination": "/pages/timeline.html" },
+    { "source": "/credits", "destination": "/pages/credits.html" },
+    { "source": "/legal", "destination": "/pages/legal.html" },
+    { "source": "/contact", "destination": "/pages/contact.html" },
+    { "source": "/license", "destination": "/pages/license.html" }
   ]
 }
