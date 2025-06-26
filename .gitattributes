@@ -1,0 +1,9 @@
+# Force LF endings for text files that need consistency
+*.html text eol=lf
+*.xml  text eol=lf
+*.js   text eol=lf
+*.css  text eol=lf
+
+# You can add others, like:
+*.json text eol=lf
+*.md   text eol=lf
