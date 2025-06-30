@@ -8,15 +8,13 @@
 > *"Symbols engraved into the ring, seven chevrons engaged… coordinates locked."*
 
 
-Welcome to **Project Callisto**, a handcrafted digital archive of the *Stargate* universe — designed and coded from the ground up by **Halil Furkan Türkmen**. This project is a fusion of science fiction fandom and self-taught web development, deployed on **GitHub Pages** for educational purposes.
-
-> Built for learning. Powered by passion.
+Welcome to **Project Callisto**, a handcrafted digital archive of the *Stargate* universe — designed and coded from the ground up by **Halil Furkan Türkmen**. This project is a fusion of science fiction fandom and self-taught web development for educational purposes.
 
 ---
 
 ## 🌌 Mission Parameters
 
-Project Callisto is a static front-end site and a personal tribute to the rich mythology of *Stargate SG-1*, *Atlantis*, and *Universe*. Every file is created manually to practice clean, scalable, and semantic web development — no frameworks, no shortcuts, just HTML, CSS, and JavaScript.
+Project Callisto is a personal tribute to the rich mythology of *Stargate SG-1*, *Atlantis*, and *Universe*. Every file is created manually to practice clean, scalable, and semantic web development — no frameworks, no shortcuts, just HTML, CSS, and JavaScript.
 
 ✧ Fan-made archive of Stargate lore and characters  
 ✧ Modular, semantic, and accessible front-end structure  
@@ -34,7 +32,6 @@ Project Callisto is a static front-end site and a personal tribute to the rich m
 | **HTML5**           | Semantic structure                      |
 | **CSS3**            | Modular styles and responsive layout    |
 | **JavaScript (vanilla)** | Planned UI enhancements            |
-| **Visual Studio Code** | Development environment              |
 
 ---
 
@@ -69,7 +66,6 @@ Project Callisto is built to explore:
 | HTML Structure  | ✅ Complete  |
 | CSS Layout/Theming | 🛠️ In progress |
 | JavaScript Logic | 🛠️ Coming soon |
-| GitHub Hosting  | ✅ Live via GitHub Pages |
 
 ---
 
@@ -106,6 +102,5 @@ Special thanks to the Stargate community, sci-fi fandom, and the open-source wor
 ## 🌀 Final Transmission
 
 Project Callisto is an active wormhole between old-school sci-fi love and modern web creation.  
-If you're a developer learning to dial in your skills — welcome to the team.
 
 **Chevron Seven: Locked.**
