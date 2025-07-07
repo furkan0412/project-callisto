@@ -1,0 +1,26 @@
+{
+  "name": "project-callisto",
+  "version": "1.0.0",
+  "description": "[![GPLv3 License](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)\r [![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-brightgreen)](https://furkan0412.github.io/project-callisto/)\r [![HTML Valid](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Ffurkan0412.github.io%2Fproject-callisto%2F)](https://validator.w3.org/)\r [![Status](https://img.shields.io/badge/Project%20Status-In%20Progress-orange)](#-current-status)",
+  "main": "generate-sitemap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/furkan0412/project-callisto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/furkan0412/project-callisto/issues"
+  },
+  "homepage": "https://github.com/furkan0412/project-callisto#readme",
+  "devDependencies": {
+    "eslint": "^9.30.1",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.5.1",
+    "prettier": "^3.6.2"
+  }
+}
