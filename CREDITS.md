@@ -10,20 +10,20 @@
 
 ## 🔧 Tools and Technologies
 
-- **HTML5 / CSS3 / JavaScript** — Handwritten from scratch  
-- **VS Code** — Code editor of choice  
-- **Git + GitHub** — Version control & hosting  
-- **GitHub Pages** — Static web deployment  
-- **Google Fonts** — Inter & JetBrains Mono typography  
+- **HTML5 / CSS3 / JavaScript** — Handwritten from scratch
+- **VS Code** — Code editor of choice
+- **Git + GitHub** — Version control & hosting
+- **GitHub Pages** — Static web deployment
+- **Google Fonts** — Inter & JetBrains Mono typography
 
 ---
 
 ## 🌌 Inspiration
 
-- The creators, cast, and crew of *Stargate SG-1*, *Stargate Atlantis*, and *Stargate Universe*  
-- The open-source community and contributors around the world  
+- The creators, cast, and crew of _Stargate SG-1_, _Stargate Atlantis_, and _Stargate Universe_
+- The open-source community and contributors around the world
 - Fellow developers learning in public, combining tech with imagination
 
 ---
 
-> *Stargate belongs to the stars. This archive belongs to learners.*
+> _Stargate belongs to the stars. This archive belongs to learners._
