@@ -6,7 +6,7 @@ Project Callisto is a **fan-made**, **non-commercial**, and **educational** proj
 
 It is **not affiliated with**, **sponsored by**, or **endorsed by** Metro-Goldwyn-Mayer (MGM), Amazon, or any official owners of the Stargate intellectual property.
 
-All rights to *Stargate*, including names, lore, logos, and media, belong to their respective rights holders.
+All rights to _Stargate_, including names, lore, logos, and media, belong to their respective rights holders.
 
 This project is an homage, created to support personal learning and share web development knowledge using science fiction as inspiration.
 
@@ -14,7 +14,7 @@ This project is an homage, created to support personal learning and share web de
 
 ## 🎨 Visual Asset Licensing
 
-All artwork and visuals in this project are **AI-generated conceptual illustrations**. 
+All artwork and visuals in this project are **AI-generated conceptual illustrations**.
 These visuals are:
 
 - **Original artworks**
@@ -25,11 +25,12 @@ These are licensed under the **Creative Commons Attribution-NonCommercial-NoDeri
 See: https://creativecommons.org/licenses/by-nc-nd/4.0/
 
 You may:
+
 - Share these visuals for personal use with attribution  
-You may **not**:
-- Use them commercially  
-- Modify them  
-- Claim them as your own  
+  You may **not**:
+- Use them commercially
+- Modify them
+- Claim them as your own
 
 ---
 
