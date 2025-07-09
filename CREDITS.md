@@ -12,8 +12,7 @@
 
 - **HTML5 / CSS3 / JavaScript** — Handwritten from scratch
 - **VS Code** — Code editor of choice
-- **Git + GitHub** — Version control & hosting
-- **GitHub Pages** — Static web deployment
+- **Git + GitHub** — Version control & repository
 - **Google Fonts** — Inter & JetBrains Mono typography
 
 ---
