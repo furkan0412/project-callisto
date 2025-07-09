@@ -1,8 +1,7 @@
 # Project Callisto: Stargate Universe Archive
 
 [![GPLv3 License](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
-[![Hosted on Vercel](https://img.shields.io/badge/Hosted%20on-Vercel-black?logo=vercel&logoColor=white)](https://project-callisto.vercel.app/)
-[![Vercel - Deployment](https://vercelbadge.vercel.app/api/project-callisto)](https://project-callisto.vercel.app/)
+[![Deployment](https://img.shields.io/badge/Deployment-Live-green?logo=vercel)](https://project-callisto.vercel.app/)
 [![HTML Valid](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fproject-callisto.vercel.app%2F)](https://validator.w3.org/)
 [![Status](https://img.shields.io/badge/Project%20Status-In%20Progress-orange)](#-current-status)
 
