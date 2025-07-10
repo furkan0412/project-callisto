@@ -110,22 +110,32 @@
       <section id="contact">
         <h2>Contact Me</h2>
         <p>Have a question or want to get in touch? Fill out the form below!</p>
-        <form action="https://formspree.io/f/mrbkwnol" method="POST" id="contact-form">
-          <label for="email">Your email:</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="your.email@example.com"
-            required
-            autocomplete="email"
-          />
+        <section>
+          <form action="https://formspree.io/f/mrbkwnol" method="POST">
+            <fieldset>
+              <legend>Get in Touch</legend>
 
-          <label for="message">Your message:</label>
-          <textarea name="message" id="message" rows="5" placeholder="Write your message here..." required></textarea>
+              <label for="name">Your Name:</label>
+              <input type="text" name="name" placeholder="An Awesome Name" id="name" required />
 
-          <button type="submit">Send</button>
-        </form>
+              <label for="email">Your Email:</label>
+              <input type="email" name="email" placeholder="your@email.com" id="email" required />
+
+              <label for="message">Your Message:</label>
+              <textarea
+                placeholder="Enter Your Message Here"
+                id="message"
+                name="message"
+                rows="5"
+                cols="20"
+                required
+              ></textarea>
+
+              <button type="reset">Reset</button>
+              <button type="submit">Submit</button>
+            </fieldset>
+          </form>
+        </section>
       </section>
     </main>
   </body>
