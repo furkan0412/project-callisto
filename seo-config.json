@@ -1,0 +1,14 @@
+{
+  "index.html": { "priority": "1.0", "changefreq": "monthly" },
+  "pages/about.html": { "priority": "0.9", "changefreq": "monthly" },
+  "pages/character.html": { "priority": "0.9", "changefreq": "monthly" },
+  "pages/concept.html": { "priority": "0.9", "changefreq": "monthly" },
+  "pages/series.html": { "priority": "0.9", "changefreq": "monthly" },
+  "pages/technology.html": { "priority": "0.9", "changefreq": "monthly" },
+  "pages/timeline.html": { "priority": "0.9", "changefreq": "monthly" },
+  "pages/race.html": { "priority": "0.9", "changefreq": "monthly" },
+  "pages/contact.html": { "priority": "0.5", "changefreq": "yearly" },
+  "pages/credits.html": { "priority": "0.5", "changefreq": "yearly" },
+  "pages/legal.html": { "priority": "0.4", "changefreq": "yearly" },
+  "pages/license.html": { "priority": "0.4", "changefreq": "yearly" }
+}
