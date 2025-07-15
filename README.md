@@ -5,6 +5,11 @@
 [![HTML Valid](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fproject-callisto.vercel.app%2F)](https://validator.w3.org/)
 [![Status](https://img.shields.io/badge/Project%20Status-In%20Progress-orange)](#-current-status)
 
+## Live Site
+
+🚀 Check out the live version of Project Callisto here:  
+[https://project-callisto.vercel.app](https://project-callisto.vercel.app)
+
 > _"Symbols engraved into the ring, seven chevrons engaged… coordinates locked."_
 
 Welcome to **Project Callisto**, a handcrafted digital archive of the _Stargate_ universe — designed and coded from the ground up by **Halil Furkan Türkmen**. This project is a fusion of science fiction fandom and self-taught web development for educational purposes.
