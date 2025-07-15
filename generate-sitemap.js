@@ -1,66 +1,65 @@
 const fs = require('fs');
 const path = require('path');
 
-// --- CONFIGURATION ---
 const baseUrl = 'https://project-callisto.vercel.app/';
+const rootDir = __dirname; // adjust if your HTML files live elsewhere
 
-const rootDir = __dirname;
-const pagesDir = path.join(rootDir, 'pages');
+// Recursively scan for .html files, return relative paths
+function scanHtmlFilesRecursive(dir, baseDir = dir) {
+  let files = [];
+  if (!fs.existsSync(dir)) return files;
 
-const pageConfig = {
-  'index.html': { priority: '1.0', changefreq: 'monthly' },
-  'about.html': { priority: '0.8', changefreq: 'monthly' },
-  'character.html': { priority: '0.9', changefreq: 'monthly' },
-  'concept.html': { priority: '0.9', changefreq: 'monthly' },
-  'race.html': { priority: '0.9', changefreq: 'monthly' },
-  'series.html': { priority: '0.9', changefreq: 'monthly' },
-  'technology.html': { priority: '0.9', changefreq: 'monthly' },
-  'timeline.html': { priority: '0.8', changefreq: 'monthly' },
-  'credits.html': { priority: '0.4', changefreq: 'yearly' },
-  'legal.html': { priority: '0.4', changefreq: 'yearly' },
-  'contact.html': { priority: '0.4', changefreq: 'yearly' },
-  'license.html': { priority: '0.4', changefreq: 'yearly' }
-};
+  fs.readdirSync(dir).forEach((file) => {
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
 
-// Helper to find HTML files in a directory
-function scanHtmlFiles(dir) {
-  if (!fs.existsSync(dir)) return [];
-  return fs.readdirSync(dir).filter(f => f.endsWith('.html'));
+    if (stat.isDirectory()) {
+      files = files.concat(scanHtmlFilesRecursive(fullPath, baseDir));
+    } else if (file.endsWith('.html')) {
+      // Relative path for URL building, normalize slashes
+      const relativePath = path.relative(baseDir, fullPath).replace(/\\/g, '/');
+      files.push(relativePath);
+    }
+  });
+
+  return files;
 }
 
-// Get all .html files
-const rootPages = fs.existsSync(path.join(rootDir, 'index.html')) ? ['index.html'] : [];
-const pageFiles = rootPages.concat(scanHtmlFiles(pagesDir));
+// Scan for all html pages under rootDir
+const htmlFiles = scanHtmlFilesRecursive(rootDir);
 
-// Start building XML
 let sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 
-pageFiles.forEach(page => {
-  const filePath = (page === 'index.html')
-    ? path.join(rootDir, page)
-    : path.join(pagesDir, page);
+htmlFiles.forEach((file) => {
+  let urlPath = file;
 
+  // Map root index.html to base URL (no filename)
+  if (urlPath === 'index.html') {
+    urlPath = '';
+  }
+
+  const loc = baseUrl + urlPath;
+
+  // Get last modified date of the file
   let lastModDate;
   try {
-    const stats = fs.statSync(filePath);
+    const stats = fs.statSync(path.join(rootDir, file));
     lastModDate = stats.mtime.toISOString();
   } catch {
     lastModDate = new Date().toISOString();
   }
 
-  const loc = (page === 'index.html')
-    ? baseUrl
-    : `${baseUrl}pages/${page}`; // ✅ Keeps .html + adds folder
-
-  const config = pageConfig[page] || { priority: '0.5', changefreq: 'weekly' };
+  // Simple SEO config: you can customize priorities/frequencies here if you want
+  const changefreq = 'monthly';
+  const priority = urlPath === '' ? '1.0' : '0.7';
 
   sitemapContent += `
   <url>
     <loc>${loc}</loc>
     <lastmod>${lastModDate}</lastmod>
-    <changefreq>${config.changefreq}</changefreq>
-    <priority>${config.priority}</priority>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
   </url>`;
 });
 
@@ -68,4 +67,5 @@ sitemapContent += `
 </urlset>`;
 
 fs.writeFileSync(path.join(rootDir, 'sitemap.xml'), sitemapContent.trim());
+
 console.log('✅ sitemap.xml generated successfully!');
