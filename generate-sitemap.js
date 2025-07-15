@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const zlib = require('zlib');
-const https = require('https');
 
 const baseUrl = 'https://project-callisto.vercel.app/';
 const rootDir = __dirname;
@@ -9,17 +8,26 @@ const sitemapPath = path.join(rootDir, 'sitemap.xml');
 const gzipPath = path.join(rootDir, 'sitemap.xml.gz');
 const logPath = path.join(rootDir, 'sitemap-log.txt');
 
-// 🔄 Load SEO configuration from external JSON
-let pageConfig = {};
-try {
-  pageConfig = JSON.parse(fs.readFileSync(path.join(rootDir, 'seo-config.json'), 'utf8'));
-} catch (err) {
-  console.warn('⚠️ seo-config.json not found or invalid. All pages will use default SEO values.');
-}
+// ✅ Manual SEO settings
+const pageConfig = {
+  'index.html': { priority: '1.0', changefreq: 'monthly' },
+  'pages/about.html': { priority: '0.9', changefreq: 'monthly' },
+  'pages/race.html': { priority: '0.9', changefreq: 'monthly' },
+  'pages/contact.html': { priority: '0.5', changefreq: 'yearly' },
+  'pages/legal.html': { priority: '0.4', changefreq: 'yearly' },
+  'pages/license.html': { priority: '0.4', changefreq: 'yearly' },
+  // Add more if needed
+};
 
-const excludePaths = ['404.html', 'temp/', 'build/'];
+// 🚫 Paths to exclude from scanning
+const excludePaths = [
+  'node_modules/',
+  '404.html',
+  // Add more files or folders here as needed
+];
 
-function scanHtmlFilesRecursive(dir, baseDir = dir, exclude = []) {
+// Recursive function to scan HTML files excluding specified paths
+function scanHtmlFilesRecursive(dir, baseDir = dir) {
   let files = [];
   if (!fs.existsSync(dir)) return files;
 
@@ -28,38 +36,29 @@ function scanHtmlFilesRecursive(dir, baseDir = dir, exclude = []) {
     const stat = fs.statSync(fullPath);
     const relPath = path.relative(baseDir, fullPath).replace(/\\/g, '/');
 
-    const isExcluded = exclude.some((pattern) =>
-      pattern.endsWith('/') ? relPath.startsWith(pattern) : relPath === pattern
-    );
-
+    // Skip excluded paths
+    const isExcluded = excludePaths.some((pattern) => {
+      if (pattern.endsWith('/')) {
+        return relPath.startsWith(pattern);
+      } else {
+        return relPath === pattern;
+      }
+    });
     if (isExcluded) continue;
 
     if (stat.isDirectory()) {
-      files = files.concat(scanHtmlFilesRecursive(fullPath, baseDir, exclude));
+      files = files.concat(scanHtmlFilesRecursive(fullPath, baseDir));
     } else if (file.endsWith('.html')) {
       files.push(relPath);
     }
   }
-
   return files;
-}
-
-function pingSearchEngine(name, url) {
-  https
-    .get(url, (res) => {
-      console.log(`📡 Pinged ${name}: ${res.statusCode} ${res.statusMessage}`);
-    })
-    .on('error', (err) => {
-      console.error(`❌ Failed to ping ${name}:`, err.message);
-    });
 }
 
 async function generateSitemap() {
   const htmlFiles = scanHtmlFilesRecursive(rootDir, rootDir, excludePaths);
-  const defaultPriority = '0.7';
-  const defaultChangefreq = 'monthly';
   let manuallyConfiguredCount = 0;
-  const defaultedPages = [];
+  let defaultedPages = [];
   const logLines = [];
 
   let sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
@@ -72,13 +71,14 @@ async function generateSitemap() {
     try {
       const stats = await fs.promises.stat(path.join(rootDir, file));
       lastMod = stats.mtime.toISOString();
-    } catch {
+    } catch (err) {
+      console.error(`Error getting stats for ${file}:`, err.message);
       lastMod = new Date().toISOString();
     }
 
     const config = pageConfig[file];
-    const priority = config?.priority || defaultPriority;
-    const changefreq = config?.changefreq || defaultChangefreq;
+    const priority = config?.priority || '0.7';
+    const changefreq = config?.changefreq || 'monthly';
 
     sitemapContent += `
     <url>
@@ -93,7 +93,7 @@ async function generateSitemap() {
       logLines.push(`✅ ${file} → priority: ${priority}, changefreq: ${changefreq}`);
     } else {
       defaultedPages.push(file);
-      logLines.push(`⚠️  ${file} → using default priority (${defaultPriority}) and changefreq (${defaultChangefreq})`);
+      logLines.push(`⚠️  ${file} → using default priority (0.7) and changefreq (monthly)`);
     }
   }
 
@@ -135,5 +135,5 @@ ${defaultedPages.map((p) => ` - ${p}`).join('\n')}
 }
 
 generateSitemap().catch((err) => {
-  console.error('Unhandled error during sitemap generation:', err);
+  console.error('An unhandled error occurred during sitemap generation:', err);
 });
