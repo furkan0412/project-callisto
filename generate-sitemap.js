@@ -4,9 +4,8 @@ const path = require('path');
 // --- CONFIGURATION ---
 const baseUrl = 'https://project-callisto.vercel.app/';
 
-// Folder paths
 const rootDir = __dirname;
-const pagesDir = path.join(__dirname, 'pages');
+const pagesDir = path.join(rootDir, 'pages');
 
 const pageConfig = {
   'index.html': { priority: '1.0', changefreq: 'monthly' },
@@ -23,21 +22,21 @@ const pageConfig = {
   'license.html': { priority: '0.4', changefreq: 'yearly' }
 };
 
-// Helper to scan .html files in a directory (non-recursive)
+// Helper to find HTML files in a directory
 function scanHtmlFiles(dir) {
   if (!fs.existsSync(dir)) return [];
   return fs.readdirSync(dir).filter(f => f.endsWith('.html'));
 }
 
-// Get all pages (index.html in root + all .html in /pages)
+// Get all .html files
 const rootPages = fs.existsSync(path.join(rootDir, 'index.html')) ? ['index.html'] : [];
 const pageFiles = rootPages.concat(scanHtmlFiles(pagesDir));
 
+// Start building XML
 let sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 
 pageFiles.forEach(page => {
-  // Determine file full path
   const filePath = (page === 'index.html')
     ? path.join(rootDir, page)
     : path.join(pagesDir, page);
@@ -50,10 +49,9 @@ pageFiles.forEach(page => {
     lastModDate = new Date().toISOString();
   }
 
-  // Build loc URL
   const loc = (page === 'index.html')
     ? baseUrl
-    : baseUrl + page.replace('.html', '');
+    : `${baseUrl}pages/${page}`; // ✅ Keeps .html + adds folder
 
   const config = pageConfig[page] || { priority: '0.5', changefreq: 'weekly' };
 
