@@ -1,14 +1,16 @@
-# Ignore VS Code settings
-.vscode/
+# Node Files
+/node_modules
 
-# Ignore Windows system files
-Thumbs.db
-
-# Ignore temporary and backup files
-*.tmp
-*.bak
-*.swp
+# Log Debug Files
 *.log
+*.log.txt
+sitemap-log.txt
+link-audit-log.txt
 
-# macOS system files (just in case)
-.DS_Store
+# Other files
+
+# Vercel
+.vercel/
+
+# Editor Config
+.vscode/
