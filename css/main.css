@@ -8,3 +8,16 @@ html {
 *:after {
     box-sizing: inherit;
 }
+
+body {
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
+}
