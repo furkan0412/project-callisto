@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://project-callisto.pages.dev/sitemap.xml
