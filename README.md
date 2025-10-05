@@ -7,7 +7,7 @@
 ![Status: Learning Project](https://img.shields.io/badge/Status-Learning%20Project-green)
 
 
-# Project Callisto 🚀
+# Project Callisto
 
 This repository serves two purposes:
 - To support learning and practice in web development.
