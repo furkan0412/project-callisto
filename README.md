@@ -1,1 +1,1 @@
-This archive is dedicated to Stargate Franchise and all of its fans around the world.
+This archive is dedicated to Stargate Franchise and the fans around the world.
