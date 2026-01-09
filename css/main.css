@@ -88,6 +88,6 @@ svg {
 
 .container {
   max-width: 1100px;
-  margin: auto;
-  padding: 20px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
