@@ -111,3 +111,8 @@ svg {
   font-size: 1.2rem;
   font-weight: 600;
 }
+
+.nav__link:hover {
+  color: #005bb5;
+  text-decoration: none;
+}
