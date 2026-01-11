@@ -127,6 +127,13 @@ svg {
   color: #001F3D;
   font-size: 1.2rem;
   font-weight: 600;
+  padding-bottom: 2px;
+  transition: color 0.2s ease;
+}
+
+.nav__link--active {
+  color: #005bb5;
+  border-bottom: 3px solid #005bb5;
 }
 
 .nav__link:hover {
