@@ -107,6 +107,7 @@ svg {
 }
 
 .nav__link {
-  color: #5C3E94;
+  color: #001F3D;
+  font-size: 1.2rem;
   font-weight: 600;
 }
