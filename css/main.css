@@ -100,10 +100,27 @@ svg {
   align-items: center;
 }
 
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .nav__list {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
+  margin: 0;
+}
+
+.header__spacer {
+  width: 40px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
 }
 
 .nav__link {
