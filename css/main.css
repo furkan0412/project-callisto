@@ -156,6 +156,10 @@ svg {
   padding: 1rem;
 }
 
+.hero__image {
+  border-radius: 10px;
+}
+
 /* Error Page Values */
 
 .error-page {
