@@ -141,12 +141,12 @@ svg {
   text-decoration: none;
 }
 
-.nav_link:hover:not(.nav__link--active) {
+.nav__link:hover:not(.nav__link--active) {
   color: #005bb5;
   text-decoration: none;
 }
 
-/* Error Page Values*/
+/* Error Page Values */
 
 .error-page {
   display: flex;
