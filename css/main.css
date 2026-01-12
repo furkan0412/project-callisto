@@ -189,3 +189,9 @@ svg {
   padding: 8px 16px;
   text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
 }
+
+.error-page__link:hover {
+  background-color: #38bdf8;
+  color: #001F3D;
+  text-decoration: none;
+}
