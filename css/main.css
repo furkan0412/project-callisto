@@ -223,3 +223,21 @@ svg {
   align-items: center;
   gap: 10px;
 }
+
+.footer__brand {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.footer__legal {
+  flex: 1;
+  min-width: 0;
+  max-width: 500px;
+  text-align: center;
+  margin-left: auto;
+}
+
+.footer__disclaimer {
+  line-height: 1.4;
+  word-wrap: break-word;
+}
