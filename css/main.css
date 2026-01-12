@@ -157,6 +157,15 @@ svg {
   background-color: #001F3D;
 }
 
+.hero__container {
+  display: flex;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+}
+
 .hero__title {
   font-size: 3rem;
   color: #fff;
