@@ -155,9 +155,6 @@ svg {
   flex: 1 0 auto;
   padding: 4rem 1rem;
   background: radial-gradient(circle at top right, #002d5a, #001F3D);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .hero__container {
