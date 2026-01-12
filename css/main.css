@@ -145,3 +145,41 @@ svg {
   color: #005bb5;
   text-decoration: none;
 }
+
+/* Error Page Values*/
+
+.error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #001F3D;
+}
+
+.error-page__container  {
+  text-align: center;
+}
+
+.error-page__heading {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.error-page__description {
+  font-size: 1.5rem;
+  color: #E6E6E6;
+  margin-bottom: 1rem;
+}
+
+.error-page__link {
+  font-size: 1.7rem;
+  display: inline-block;
+  color: #001F3D;
+  background-color: #E6E6E6;
+  text-decoration: none;
+  border: 1px solid #001F3D;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  padding: 8px 16px;
+}
