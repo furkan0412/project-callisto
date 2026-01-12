@@ -187,4 +187,5 @@ svg {
   border-radius: 10px;
   transition: background 0.3s ease;
   padding: 8px 16px;
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
 }
