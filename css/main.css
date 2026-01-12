@@ -216,6 +216,11 @@ svg {
   max-width: 500px;
   height: auto;
   box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
+  transition: transform 0.5s ease;
+}
+
+.hero__image:hover {
+  transform: scale(1.02);
 }
 
 /* Error Page Values */
