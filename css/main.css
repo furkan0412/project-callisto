@@ -157,6 +157,29 @@ svg {
   background-color: #001F3D;
 }
 
+.hero__title {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.hero__description {
+  font-size: 1.5rem;
+  color: #E6E6E6;
+}
+
+.hero__btn {
+  font-size: 1.2rem;
+  display: inline-block;
+  color: #001F3D;
+  background-color: #E6E6E6;
+  text-decoration: none;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  padding: 8px 16px;
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+}
+
 .hero__image {
   border-radius: 10px;
 }
