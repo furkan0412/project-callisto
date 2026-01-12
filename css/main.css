@@ -180,6 +180,12 @@ svg {
   text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
 }
 
+.hero__btn:hover {
+  background-color: #38bdf8;
+  color: #001F3D;
+  text-decoration: none;
+}
+
 .hero__image {
   border-radius: 10px;
 }
