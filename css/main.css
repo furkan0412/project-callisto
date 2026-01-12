@@ -23,6 +23,7 @@ body {
   overflow-wrap: break-word;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -148,6 +149,13 @@ svg {
   text-decoration: none;
 }
 
+/* Hero Section Values */
+
+.hero {
+  flex: 1 0 auto;
+  padding: 1rem;
+}
+
 /* Error Page Values */
 
 .error-page {
@@ -198,8 +206,12 @@ svg {
   text-decoration: none;
 }
 
+/* Footer Values */
+
 .footer {
   background-color: #001F3D;
+  flex-shrink: 0;
+  padding: 1rem;
 }
 
 .footer__container {
