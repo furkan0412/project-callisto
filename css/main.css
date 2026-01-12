@@ -153,8 +153,8 @@ svg {
 
 .hero {
   flex: 1 0 auto;
-  padding: 1rem;
-  background-color: #001F3D;
+  padding: 4rem 1rem;
+  background: radial-gradient(circle at top right, #002d5a, #001F3D);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,8 +162,10 @@ svg {
 
 .hero__container {
   max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
-  gap: 20px;
+  gap: 40px;
   justify-content: center;
   align-items: center;
 }
@@ -174,13 +176,18 @@ svg {
 }
 
 .hero__title {
-  font-size: 3rem;
+  font-size: 4rem;
   color: #fff;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .hero__description {
-  font-size: 1.5rem;
-  color: #E6E6E6;
+  font-size: 1.2rem;
+  color: #B0C4DE;
+  margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
 .hero__btn {
@@ -205,6 +212,10 @@ svg {
 
 .hero__image {
   border-radius: 10px;
+  flex: 1;
+  max-width: 500px;
+  height: auto;
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
 }
 
 /* Error Page Values */
